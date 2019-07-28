@@ -5,16 +5,15 @@
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript">
     $(document).ready(function() {
-        var url = "https://turreted-worries.000webhostapp.com/appcordova/www/json.php";
+        var url = "https://turreted-worries.000webhostapp.com/obatin/www/json.php";
         $.getJSON(url, function(result) {
             console.log(result);
             $.each(result, function(i, field) {
-                var id_makanan = field.id_makanan;
-                var nama_makanan = field.nama_makanan;
+                var id_obat = field.id_obat;
+                var nama_obat = field.nama_obat;
                 var harga = field.harga;
-                var stok = field.stok;
-                var id_penjual = field.id_penjual;
-                $("#listview").append("<a class='item' href='form.html?id_makanan=" + id_makanan + "&nama_makanan=" + nama_makanan + "&harga=" + harga + "&stok=" + stok + "&id_penjual=" + id_penjual + "'><h2>" + nama_makanan + " </h2><h2>" + harga + " </h2><h2>" + stok + "</h2><h2>" + id_penjual + "</h2></a>");
+                var jumlah = field.jumlah;
+                $("#listview").append("<a class='item' href='form.html?id_obat=" + id_obat + "&nama_obat=" + nama_obat + "&harga=" + harga + "&jumlah=" + jumlah + "'><h2>" + nama_obat + " </h2><h2>" + harga + " </h2><h2>" + jumlah + "</h2></a>");
             });
         });
     });
