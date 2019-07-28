@@ -1,9 +1,9 @@
 <?php
  include "db.php";
- if(isset($_GET['id_makanan']))
+ if(isset($_GET['id_obat']))
  {
- $id_makanan=$_GET['id_makanan'];
- $q=mysqli_query($con,"delete from `makanan` where `id_makanan`='$id_makanan'");
+ $id_obat=$_GET['id_obat'];
+ $q=mysqli_query($con,"delete from `produk` where `id_obat`='$id_obat'");
  if($q)
  echo "success";
  else
