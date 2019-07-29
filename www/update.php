@@ -2,12 +2,11 @@
  include "db.php";
  if(isset($_POST['update']))
  {
- $id_makanan=$_POST['id_makanan'];
- $nama_makanan=$_POST['nama_makanan'];
+ $id_obat=$_POST['id_obat'];
+ $nama_obat=$_POST['nama_obat'];
  $harga=$_POST['harga'];
- $stok=$_POST['stok'];
- $id_penjual=$_POST['id_penjual'];
- $q=mysqli_query($con,"UPDATE `makanan` SET `nama_makanan`='$nama_makanan',`harga`='$harga',`stok`='$stok',`id_penjual`='$id_penjual' where `id_makanan`='$id_makanan'");
+ $jumlah=$_POST['jumlah'];
+ $q=mysqli_query($con,"UPDATE `produk` SET `nama_obat`='$nama_obat',`harga`='$harga',`jumlah`='$jumlah' where `id_obat`='$id_obat'");
  if($q)
  echo "success";
  else
